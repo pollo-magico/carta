@@ -1,7 +1,133 @@
 html {
-  min-height: 100vh;
+    min-height: 100vh;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+
+    background-image: url("bg.jpg");
+    line-height: 2rem;
+}
+
+@keyframes float {
+    from { transform: translateY(0.1rem) }
+    to { transform: translateY(-0.1rem) }
+}
+
+span {
+    display: inline-block;
+    white-space: pre;
+
+
 }
 
 body {
-  padding: 5rem 20rem;
+    margin: 0 max(calc((100vw - 800px) * 0.5), 0px);
+    padding: 5rem 5rem;
+    background: lightgoldenrodyellow;
+
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+h1 > * {
+    animation-name:float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+h1 > *:nth-child(2n) {
+    color: green;
+}
+
+h1 > *:nth-child(2n-1) {
+    color: red;
+    animation-delay: -2s;
+}
+
+strong {
+    text-decoration: dotted underline;
+}
+
+em {
+    text-decoration: red wavy underline;
+}
+
+ul {
+    margin-left: 4rem;
+    list-style:none;
+}
+
+ul li::marker {
+    content:'💡 ';
+}
+
+
+ul ul li::marker {
+    content:'🎧 ';
+}
+
+summary {
+    cursor: pointer;
+}
+
+a {
+    position: relative;
+    z-index: 2; 
+}
+
+details > summary {
+    list-style: none;
+    transition: linear 0.2s;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+a::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    height: 0.2em;
+    width: 100%;
+    background: rgba(255, 0, 43, 0.459);
+    transition: 0.2s;
+}
+
+a:hover::after {
+    height: 0.8em;
+    transition: 0.2s;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+} 
+details > p {
+    margin: 0;
+}
+
+footer {
+    margin-top: 4rem;
+    font-size: 1.1rem;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.desc-image {
+    float:right;
+}
+
+img {
+    margin-left: 2rem;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 2px;
+    border-style:solid;
+    display:inline-block;
 }
