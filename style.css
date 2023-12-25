@@ -111,9 +111,11 @@ a::after {
     transition: 0.2s;
 }
 
-a:hover::after {
-    height: 0.8em;
-    transition: 0.2s;
+@media (hover: hover) {
+    a:hover::after {
+        height: 0.8em;
+        transition: 0.2s;
+    }
 }
 
 details > summary::-webkit-details-marker {
