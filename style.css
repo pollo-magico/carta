@@ -14,8 +14,6 @@ html {
 span {
     display: inline-block;
     white-space: pre;
-
-
 }
 
 body {
@@ -24,6 +22,10 @@ body {
     background: lightgoldenrodyellow;
 
     min-height: 100vh;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
