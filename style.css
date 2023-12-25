@@ -2,7 +2,7 @@ html {
     min-height: 100vh;
     font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
 
-    background-image: url("bg.jpg");
+    background-image: url("carta/bg.jpg");
     line-height: 2rem;
 }
 
