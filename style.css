@@ -4,6 +4,10 @@ html {
 
     background-image: url("bg.jpg");
     line-height: 2rem;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @keyframes float {
@@ -21,16 +25,15 @@ body {
     padding: 5rem 5rem;
     background: lightgoldenrodyellow;
 
-    min-height: 100vh;
-
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
 
-@media (min-device-width: 800px) {
+@media (min-device-width: 820px) {
     body {
         margin: 0 calc(50vw - 400px);
+        min-height: 100vh;
     }
 }
 
