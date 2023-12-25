@@ -28,7 +28,7 @@ body {
     justify-content: center;
 }
 
-@media (min-width: 820px) {
+@media (min-device-width: 800px) {
     body {
         margin: 0 calc(50vw - 400px);
     }
